@@ -1,0 +1,8 @@
+<map id="first/Src/main.c" name="first/Src/main.c">
+<area shape="rect" id="node2" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application. " alt="" coords="999,155,1061,181"/>
+<area shape="rect" id="node18" href="$adc_8h.html" title="adc.h" alt="" coords="901,80,956,107"/>
+<area shape="rect" id="node19" href="$dma_8h.html" title="dma.h" alt="" coords="981,80,1039,107"/>
+<area shape="rect" id="node20" href="$tim_8h.html" title="tim.h" alt="" coords="1063,80,1114,107"/>
+<area shape="rect" id="node21" href="$usart_8h.html" title="usart.h" alt="" coords="1139,80,1201,107"/>
+<area shape="rect" id="node22" href="$gpio_8h.html" title="gpio.h" alt="" coords="1591,80,1648,107"/>
+</map>

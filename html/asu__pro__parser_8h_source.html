@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Тестовое задание для АСУ ПРО: Исходный файл first/Inc/asu_pro_parser.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Тестовое задание для АСУ ПРО
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Тестовое задание для АСУ ПРО</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.14 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_78523e90048af9308d791f3c9e5e0a00.html">first</a></li><li class="navelem"><a class="el" href="dir_cdfe7cf05c8a8216327e572251344af7.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">asu_pro_parser.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="asu__pro__parser_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ASU_PRO_PARSER_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ASU_PRO_PARSER_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;stdint.h&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35">    7</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35">Parser_state</a>{</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35a1b3933b132d038b81926a9f6a80e57c8">    8</a></span>&#160;      <a class="code" href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35a1b3933b132d038b81926a9f6a80e57c8">_LED_OFF</a> = 1,</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35a9d0e6d90346eb59f9da0d6f0fbf8024e">    9</a></span>&#160;      <a class="code" href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35a9d0e6d90346eb59f9da0d6f0fbf8024e">_LED_ON</a>,</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35a5e8e9ad55db9e13aae24ffba5a3304f7">   10</a></span>&#160;      <a class="code" href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35a5e8e9ad55db9e13aae24ffba5a3304f7">_GET_ADC_AVG_VOLTAGE</a>,</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35a754c520287fcf84edafd460944b1e4ea">   11</a></span>&#160;      <a class="code" href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35a754c520287fcf84edafd460944b1e4ea">_SET_ADC_SAMPLE_RATE</a></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="struct_u_a_r_t___queue__typedef.html">   17</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  </div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_u_a_r_t___queue__typedef.html#a8aed22e2c7b283705ec82e0120515618">   20</a></span>&#160;  uint16_t <a class="code" href="struct_u_a_r_t___queue__typedef.html#a8aed22e2c7b283705ec82e0120515618">len</a>;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_u_a_r_t___queue__typedef.html#a0e0dffc35aa86c3f381de2b41070f9ea">   21</a></span>&#160;  uint16_t  <a class="code" href="struct_u_a_r_t___queue__typedef.html#a0e0dffc35aa86c3f381de2b41070f9ea">pos</a>;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  </div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;} <a class="code" href="struct_u_a_r_t___queue__typedef.html">UART_Queue_typedef</a>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;uint32_t <a class="code" href="asu__pro__parser_8h.html#a940367e6fa9f911eecba829b431cf47b">Parse_AsuProMess</a>(<a class="code" href="struct_u_a_r_t___queue__typedef.html">UART_Queue_typedef</a> qdata);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;uint32_t  <a class="code" href="asu__pro__parser_8h.html#a9888473c75f3110737cf7848dcfb29ec">Send_AsuProMess</a>(<span class="keywordtype">char</span> *mes, uint16_t len);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ASU_PRO_PARSER_H */</span><span class="preprocessor"></span></div><div class="ttc" id="asu__pro__parser_8h_html_a56ef22cb8c7b804e532c32381b8a9c35a5e8e9ad55db9e13aae24ffba5a3304f7"><div class="ttname"><a href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35a5e8e9ad55db9e13aae24ffba5a3304f7">_GET_ADC_AVG_VOLTAGE</a></div><div class="ttdef"><b>Definition:</b> asu_pro_parser.h:10</div></div>
+<div class="ttc" id="asu__pro__parser_8h_html_a56ef22cb8c7b804e532c32381b8a9c35"><div class="ttname"><a href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35">Parser_state</a></div><div class="ttdeci">Parser_state</div><div class="ttdef"><b>Definition:</b> asu_pro_parser.h:7</div></div>
+<div class="ttc" id="struct_u_a_r_t___queue__typedef_html_a0e0dffc35aa86c3f381de2b41070f9ea"><div class="ttname"><a href="struct_u_a_r_t___queue__typedef.html#a0e0dffc35aa86c3f381de2b41070f9ea">UART_Queue_typedef::pos</a></div><div class="ttdeci">uint16_t pos</div><div class="ttdoc">позиция конца сообщения </div><div class="ttdef"><b>Definition:</b> asu_pro_parser.h:21</div></div>
+<div class="ttc" id="asu__pro__parser_8h_html_a56ef22cb8c7b804e532c32381b8a9c35a1b3933b132d038b81926a9f6a80e57c8"><div class="ttname"><a href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35a1b3933b132d038b81926a9f6a80e57c8">_LED_OFF</a></div><div class="ttdef"><b>Definition:</b> asu_pro_parser.h:8</div></div>
+<div class="ttc" id="asu__pro__parser_8h_html_a56ef22cb8c7b804e532c32381b8a9c35a754c520287fcf84edafd460944b1e4ea"><div class="ttname"><a href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35a754c520287fcf84edafd460944b1e4ea">_SET_ADC_SAMPLE_RATE</a></div><div class="ttdef"><b>Definition:</b> asu_pro_parser.h:11</div></div>
+<div class="ttc" id="struct_u_a_r_t___queue__typedef_html_a8aed22e2c7b283705ec82e0120515618"><div class="ttname"><a href="struct_u_a_r_t___queue__typedef.html#a8aed22e2c7b283705ec82e0120515618">UART_Queue_typedef::len</a></div><div class="ttdeci">uint16_t len</div><div class="ttdoc">длина </div><div class="ttdef"><b>Definition:</b> asu_pro_parser.h:20</div></div>
+<div class="ttc" id="struct_u_a_r_t___queue__typedef_html"><div class="ttname"><a href="struct_u_a_r_t___queue__typedef.html">UART_Queue_typedef</a></div><div class="ttdef"><b>Definition:</b> asu_pro_parser.h:17</div></div>
+<div class="ttc" id="asu__pro__parser_8h_html_a9888473c75f3110737cf7848dcfb29ec"><div class="ttname"><a href="asu__pro__parser_8h.html#a9888473c75f3110737cf7848dcfb29ec">Send_AsuProMess</a></div><div class="ttdeci">uint32_t Send_AsuProMess(char *mes, uint16_t len)</div><div class="ttdef"><b>Definition:</b> asu_pro_parser.c:147</div></div>
+<div class="ttc" id="asu__pro__parser_8h_html_a940367e6fa9f911eecba829b431cf47b"><div class="ttname"><a href="asu__pro__parser_8h.html#a940367e6fa9f911eecba829b431cf47b">Parse_AsuProMess</a></div><div class="ttdeci">uint32_t Parse_AsuProMess(UART_Queue_typedef qdata)</div><div class="ttdef"><b>Definition:</b> asu_pro_parser.c:59</div></div>
+<div class="ttc" id="asu__pro__parser_8h_html_a56ef22cb8c7b804e532c32381b8a9c35a9d0e6d90346eb59f9da0d6f0fbf8024e"><div class="ttname"><a href="asu__pro__parser_8h.html#a56ef22cb8c7b804e532c32381b8a9c35a9d0e6d90346eb59f9da0d6f0fbf8024e">_LED_ON</a></div><div class="ttdef"><b>Definition:</b> asu_pro_parser.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

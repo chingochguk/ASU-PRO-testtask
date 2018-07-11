@@ -1,0 +1,1064 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Тестовое задание для АСУ ПРО: Файл first/Src/freertos.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Тестовое задание для АСУ ПРО
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Тестовое задание для АСУ ПРО</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.14 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_78523e90048af9308d791f3c9e5e0a00.html">first</a></li><li class="navelem"><a class="el" href="dir_42a6f18dc4412fd97d5cd0491fff3ec6.html">Src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл freertos.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;FreeRTOS.h&quot;</code><br />
+<code>#include &quot;task.h&quot;</code><br />
+<code>#include &quot;cmsis_os.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="asu__pro__parser_8h_source.html">asu_pro_parser.h</a>&quot;</code><br />
+<code>#include &quot;string.h&quot;</code><br />
+<code>#include &quot;ctype.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для freertos.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="freertos_8c__incl.png" border="0" usemap="#first_2_src_2freertos_8c" alt=""/></div>
+<map name="first_2_src_2freertos_8c" id="first_2_src_2freertos_8c">
+<area shape="rect" id="node5" href="asu__pro__parser_8h.html" title="asu_pro_parser.h" alt="" coords="322,80,445,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ac9a9c2a3f177a2c8cf04ebef364774a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#ac9a9c2a3f177a2c8cf04ebef364774a3">ADC_VAL_BUFFER_SIZE</a>&#160;&#160;&#160;128</td></tr>
+<tr class="memdesc:ac9a9c2a3f177a2c8cf04ebef364774a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">размер буфера для значений ADC.  <a href="#ac9a9c2a3f177a2c8cf04ebef364774a3">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac9a9c2a3f177a2c8cf04ebef364774a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf8dd9ab3c280546294426241c1a438b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#adf8dd9ab3c280546294426241c1a438b">ADC_VAL_BUFFER_SIZE_MASK</a>&#160;&#160;&#160;((<a class="el" href="freertos_8c.html#ac9a9c2a3f177a2c8cf04ebef364774a3">ADC_VAL_BUFFER_SIZE</a>) - 1)</td></tr>
+<tr class="separator:adf8dd9ab3c280546294426241c1a438b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61a56158cf880ae548bfce4b05db342b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a61a56158cf880ae548bfce4b05db342b">LED_FlachRate</a>&#160;&#160;&#160;(100  / portTICK_RATE_MS)</td></tr>
+<tr class="memdesc:a61a56158cf880ae548bfce4b05db342b"><td class="mdescLeft">&#160;</td><td class="mdescRight">5Гц  <a href="#a61a56158cf880ae548bfce4b05db342b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a61a56158cf880ae548bfce4b05db342b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d37691fdd24524795e16d3d7ac27202"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a4d37691fdd24524795e16d3d7ac27202">LED_SLOW</a>&#160;&#160;&#160;(1000 / portTICK_RATE_MS)</td></tr>
+<tr class="memdesc:a4d37691fdd24524795e16d3d7ac27202"><td class="mdescLeft">&#160;</td><td class="mdescRight">0.5Гц  <a href="#a4d37691fdd24524795e16d3d7ac27202">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4d37691fdd24524795e16d3d7ac27202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a664d5d4f81038976e8a4d32a03d27116"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a664d5d4f81038976e8a4d32a03d27116">LED_MEDIUM</a>&#160;&#160;&#160;(500 / portTICK_RATE_MS)</td></tr>
+<tr class="memdesc:a664d5d4f81038976e8a4d32a03d27116"><td class="mdescLeft">&#160;</td><td class="mdescRight">1Гц  <a href="#a664d5d4f81038976e8a4d32a03d27116">Подробнее...</a><br /></td></tr>
+<tr class="separator:a664d5d4f81038976e8a4d32a03d27116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72059907a7059f38235d71844910312c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a72059907a7059f38235d71844910312c">LED_FAST</a>&#160;&#160;&#160;(250  / portTICK_RATE_MS)</td></tr>
+<tr class="memdesc:a72059907a7059f38235d71844910312c"><td class="mdescLeft">&#160;</td><td class="mdescRight">2Гц  <a href="#a72059907a7059f38235d71844910312c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a72059907a7059f38235d71844910312c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eeea263034e2501cb1083a96a53e2d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a4eeea263034e2501cb1083a96a53e2d7">NOT_READY</a>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="memdesc:a4eeea263034e2501cb1083a96a53e2d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">идентификатор не готовности среднего значения ADC.  <a href="#a4eeea263034e2501cb1083a96a53e2d7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4eeea263034e2501cb1083a96a53e2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a8e6aa0c8558a5c10b3f313e39147b3b7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a8e6aa0c8558a5c10b3f313e39147b3b7">flash_state</a> { <br />
+&#160;&#160;<a class="el" href="freertos_8c.html#a8e6aa0c8558a5c10b3f313e39147b3b7aa76c1807df10e63863984248ff01ef31">fl_off</a> = 0, 
+<a class="el" href="freertos_8c.html#a8e6aa0c8558a5c10b3f313e39147b3b7a76d01171c5a41d3acaf2ce88411ba36b">fl_on</a>, 
+<a class="el" href="freertos_8c.html#a8e6aa0c8558a5c10b3f313e39147b3b7a944daebbf02ca9443cd3c9ac8dfdb17b">fl_slow</a>, 
+<a class="el" href="freertos_8c.html#a8e6aa0c8558a5c10b3f313e39147b3b7a8466c39229c47a09fd725af14e4d904c">fl_med</a>, 
+<br />
+&#160;&#160;<a class="el" href="freertos_8c.html#a8e6aa0c8558a5c10b3f313e39147b3b7a2be536988c2744e9deb124e2cf6a0bc2">fl_fast</a>
+<br />
+ }</td></tr>
+<tr class="separator:a8e6aa0c8558a5c10b3f313e39147b3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a308aef3c83ed238f869ec99de5fbe270"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a308aef3c83ed238f869ec99de5fbe270">LED_Flash</a> (enum <a class="el" href="freertos_8c.html#a8e6aa0c8558a5c10b3f313e39147b3b7">flash_state</a> fl_state, portTickType *LED_SleepTime)</td></tr>
+<tr class="separator:a308aef3c83ed238f869ec99de5fbe270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba5ccd1d820db1de169e9321e8b87f3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#aeba5ccd1d820db1de169e9321e8b87f3">itoa</a> (int value, char *str, int base)</td></tr>
+<tr class="separator:aeba5ccd1d820db1de169e9321e8b87f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01264c39e4ef8945e436d9a9a51e3ff1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a01264c39e4ef8945e436d9a9a51e3ff1">strreverse</a> (char *begin, char *end)</td></tr>
+<tr class="separator:a01264c39e4ef8945e436d9a9a51e3ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37797a7ab19b96e0db3bc95f893d29a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a37797a7ab19b96e0db3bc95f893d29a6">StartReceiveTask</a> (void const *argument)</td></tr>
+<tr class="separator:a37797a7ab19b96e0db3bc95f893d29a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af92ea2a2293aa2982cfd9270d755e7dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#af92ea2a2293aa2982cfd9270d755e7dc">StartLedTask</a> (void const *argument)</td></tr>
+<tr class="separator:af92ea2a2293aa2982cfd9270d755e7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d686e7ddadd81a35804436f553f0398"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a1d686e7ddadd81a35804436f553f0398">StartMovingAverageTask</a> (void const *argument)</td></tr>
+<tr class="separator:a1d686e7ddadd81a35804436f553f0398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abade755e13d07c10889ae83143656158"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#abade755e13d07c10889ae83143656158">MX_FREERTOS_Init</a> (void)</td></tr>
+<tr class="separator:abade755e13d07c10889ae83143656158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1988aa923b19fa6f31c93afa7773f793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a1988aa923b19fa6f31c93afa7773f793">vApplicationGetIdleTaskMemory</a> (StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize)</td></tr>
+<tr class="separator:a1988aa923b19fa6f31c93afa7773f793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a68d8f2b746d17f0a83cfb19de009b323"><td class="memItemLeft" align="right" valign="top">osThreadId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a68d8f2b746d17f0a83cfb19de009b323">ReceiveTaskHandle</a></td></tr>
+<tr class="separator:a68d8f2b746d17f0a83cfb19de009b323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dc28ecc8fd6134809ba0758c503f662"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a7dc28ecc8fd6134809ba0758c503f662">ReceiveTaskBuffer</a> [256]</td></tr>
+<tr class="separator:a7dc28ecc8fd6134809ba0758c503f662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae13133bb24cce188fc1cfc4a42b95e5"><td class="memItemLeft" align="right" valign="top">osStaticThreadDef_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#aae13133bb24cce188fc1cfc4a42b95e5">ReceiveTaskControlBlock</a></td></tr>
+<tr class="separator:aae13133bb24cce188fc1cfc4a42b95e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac76f95c4fb6865ff7dcab1e89c53b7c5"><td class="memItemLeft" align="right" valign="top">osThreadId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#ac76f95c4fb6865ff7dcab1e89c53b7c5">LedTaskHandle</a></td></tr>
+<tr class="separator:ac76f95c4fb6865ff7dcab1e89c53b7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a7636aaf0d4dc7a07eed7c2a30d6b97"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a9a7636aaf0d4dc7a07eed7c2a30d6b97">LedTaskBuffer</a> [128]</td></tr>
+<tr class="separator:a9a7636aaf0d4dc7a07eed7c2a30d6b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02cc32c1e285191b5b1601e7f768115c"><td class="memItemLeft" align="right" valign="top">osStaticThreadDef_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a02cc32c1e285191b5b1601e7f768115c">LedTaskControlBlock</a></td></tr>
+<tr class="separator:a02cc32c1e285191b5b1601e7f768115c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc5ab648e9d47664f60528d6036c47d9"><td class="memItemLeft" align="right" valign="top">osThreadId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#acc5ab648e9d47664f60528d6036c47d9">MovingAverageTaHandle</a></td></tr>
+<tr class="separator:acc5ab648e9d47664f60528d6036c47d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c4cab44b25fa988952bed1c2d2dc4c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#aa3c4cab44b25fa988952bed1c2d2dc4c">MovingAverageTaskBuffer</a> [128]</td></tr>
+<tr class="separator:aa3c4cab44b25fa988952bed1c2d2dc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a395bd3686175360452df80f785aaad34"><td class="memItemLeft" align="right" valign="top">osStaticThreadDef_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a395bd3686175360452df80f785aaad34">MovingAverageTaskControlBlock</a></td></tr>
+<tr class="separator:a395bd3686175360452df80f785aaad34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96e0c99246a586399c9d3ff0a7a5fe04"><td class="memItemLeft" align="right" valign="top">osMessageQId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a96e0c99246a586399c9d3ff0a7a5fe04">UartRXQueueHandle</a></td></tr>
+<tr class="separator:a96e0c99246a586399c9d3ff0a7a5fe04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a780a1dd74101cc7f966969fc2fd9cf5e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a780a1dd74101cc7f966969fc2fd9cf5e">UartRXQueueBuffer</a> [1 *sizeof(uint32_t)]</td></tr>
+<tr class="separator:a780a1dd74101cc7f966969fc2fd9cf5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a68a8fab9c3be2808f5db4cfd675be8"><td class="memItemLeft" align="right" valign="top">osStaticMessageQDef_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a5a68a8fab9c3be2808f5db4cfd675be8">UartRXQueueControlBlock</a></td></tr>
+<tr class="separator:a5a68a8fab9c3be2808f5db4cfd675be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14b2cb20562d3afe4dda29cdf4300332"><td class="memItemLeft" align="right" valign="top">osMessageQId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a14b2cb20562d3afe4dda29cdf4300332">LEDQueueHandle</a></td></tr>
+<tr class="separator:a14b2cb20562d3afe4dda29cdf4300332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9c992542c6705e73343507017fbbbc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a2e9c992542c6705e73343507017fbbbc">LEDQueueBuffer</a> [1 *sizeof(uint16_t)]</td></tr>
+<tr class="separator:a2e9c992542c6705e73343507017fbbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54721ef8d2fb7530bc4b99d5d8450e52"><td class="memItemLeft" align="right" valign="top">osStaticMessageQDef_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a54721ef8d2fb7530bc4b99d5d8450e52">LEDQueueControlBlock</a></td></tr>
+<tr class="separator:a54721ef8d2fb7530bc4b99d5d8450e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2300456fdc4a8deb4ef12c6ad016e6a0"><td class="memItemLeft" align="right" valign="top">osMessageQId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a2300456fdc4a8deb4ef12c6ad016e6a0">ADCValQueueHandle</a></td></tr>
+<tr class="separator:a2300456fdc4a8deb4ef12c6ad016e6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbf495f0615d85a718661e4b4e750727"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#abbf495f0615d85a718661e4b4e750727">ADCValQueueBuffer</a> [1 *sizeof(uint32_t)]</td></tr>
+<tr class="separator:abbf495f0615d85a718661e4b4e750727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a410409eaa1b457af692cb072b09e2382"><td class="memItemLeft" align="right" valign="top">osStaticMessageQDef_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a410409eaa1b457af692cb072b09e2382">ADCValQueueControlBlock</a></td></tr>
+<tr class="separator:a410409eaa1b457af692cb072b09e2382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ffcbc6cd59555cb138cf9b3cd4cc48a"><td class="memItemLeft" align="right" valign="top">osMessageQId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a8ffcbc6cd59555cb138cf9b3cd4cc48a">ADCAverQueueHandle</a></td></tr>
+<tr class="separator:a8ffcbc6cd59555cb138cf9b3cd4cc48a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32261fff756cd4ad429e5eeb8be00860"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a32261fff756cd4ad429e5eeb8be00860">ADCAverQueueBuffer</a> [1 *sizeof(float)]</td></tr>
+<tr class="separator:a32261fff756cd4ad429e5eeb8be00860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4669ba6396c4bb263c76e593bb05a8"><td class="memItemLeft" align="right" valign="top">osStaticMessageQDef_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#aef4669ba6396c4bb263c76e593bb05a8">ADCAverQueueControlBlock</a></td></tr>
+<tr class="separator:aef4669ba6396c4bb263c76e593bb05a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd6de59aba35c943828ef1d3bf8a7d0"><td class="memItemLeft" align="right" valign="top">osSemaphoreId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a1cd6de59aba35c943828ef1d3bf8a7d0">TXSemHandle</a></td></tr>
+<tr class="separator:a1cd6de59aba35c943828ef1d3bf8a7d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa38d4ccba721bf1ad62b7f4b2301ab24"><td class="memItemLeft" align="right" valign="top">osStaticSemaphoreDef_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#aa38d4ccba721bf1ad62b7f4b2301ab24">TXSemControlBlock</a></td></tr>
+<tr class="separator:aa38d4ccba721bf1ad62b7f4b2301ab24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c0a41151b69bb411f7af47b8eca7183"><td class="memItemLeft" align="right" valign="top">osSemaphoreId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a0c0a41151b69bb411f7af47b8eca7183">GetAvSemHandle</a></td></tr>
+<tr class="separator:a0c0a41151b69bb411f7af47b8eca7183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7da911c41152df8683d69a00b3bb4c5"><td class="memItemLeft" align="right" valign="top">osStaticSemaphoreDef_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#ae7da911c41152df8683d69a00b3bb4c5">GetAvSemControlBlock</a></td></tr>
+<tr class="separator:ae7da911c41152df8683d69a00b3bb4c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c47ad32e481d42b982c4131be1bdd66"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#a1c47ad32e481d42b982c4131be1bdd66">ADC_ValBuf</a> [<a class="el" href="freertos_8c.html#ac9a9c2a3f177a2c8cf04ebef364774a3">ADC_VAL_BUFFER_SIZE</a>]</td></tr>
+<tr class="memdesc:a1c47ad32e481d42b982c4131be1bdd66"><td class="mdescLeft">&#160;</td><td class="mdescRight">буфер для хранения значений ADC.  <a href="#a1c47ad32e481d42b982c4131be1bdd66">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1c47ad32e481d42b982c4131be1bdd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda0cc2130676391115d29af493a2d11"><td class="memItemLeft" align="right" valign="top">osMessageQId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="freertos_8c.html#adda0cc2130676391115d29af493a2d11">UartQueueHandle</a></td></tr>
+<tr class="separator:adda0cc2130676391115d29af493a2d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="ac9a9c2a3f177a2c8cf04ebef364774a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a9c2a3f177a2c8cf04ebef364774a3">&#9670;&nbsp;</a></span>ADC_VAL_BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADC_VAL_BUFFER_SIZE&#160;&#160;&#160;128</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>размер буфера для значений ADC. </p>
+
+</div>
+</div>
+<a id="adf8dd9ab3c280546294426241c1a438b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf8dd9ab3c280546294426241c1a438b">&#9670;&nbsp;</a></span>ADC_VAL_BUFFER_SIZE_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADC_VAL_BUFFER_SIZE_MASK&#160;&#160;&#160;((<a class="el" href="freertos_8c.html#ac9a9c2a3f177a2c8cf04ebef364774a3">ADC_VAL_BUFFER_SIZE</a>) - 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72059907a7059f38235d71844910312c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72059907a7059f38235d71844910312c">&#9670;&nbsp;</a></span>LED_FAST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_FAST&#160;&#160;&#160;(250  / portTICK_RATE_MS)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>2Гц </p>
+
+</div>
+</div>
+<a id="a61a56158cf880ae548bfce4b05db342b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61a56158cf880ae548bfce4b05db342b">&#9670;&nbsp;</a></span>LED_FlachRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_FlachRate&#160;&#160;&#160;(100  / portTICK_RATE_MS)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>5Гц </p>
+
+</div>
+</div>
+<a id="a664d5d4f81038976e8a4d32a03d27116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a664d5d4f81038976e8a4d32a03d27116">&#9670;&nbsp;</a></span>LED_MEDIUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_MEDIUM&#160;&#160;&#160;(500 / portTICK_RATE_MS)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1Гц </p>
+
+</div>
+</div>
+<a id="a4d37691fdd24524795e16d3d7ac27202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d37691fdd24524795e16d3d7ac27202">&#9670;&nbsp;</a></span>LED_SLOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_SLOW&#160;&#160;&#160;(1000 / portTICK_RATE_MS)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>0.5Гц </p>
+
+</div>
+</div>
+<a id="a4eeea263034e2501cb1083a96a53e2d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eeea263034e2501cb1083a96a53e2d7">&#9670;&nbsp;</a></span>NOT_READY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NOT_READY&#160;&#160;&#160;0xFFFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>идентификатор не готовности среднего значения ADC. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="a8e6aa0c8558a5c10b3f313e39147b3b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e6aa0c8558a5c10b3f313e39147b3b7">&#9670;&nbsp;</a></span>flash_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="freertos_8c.html#a8e6aa0c8558a5c10b3f313e39147b3b7">flash_state</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a8e6aa0c8558a5c10b3f313e39147b3b7aa76c1807df10e63863984248ff01ef31"></a>fl_off&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8e6aa0c8558a5c10b3f313e39147b3b7a76d01171c5a41d3acaf2ce88411ba36b"></a>fl_on&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8e6aa0c8558a5c10b3f313e39147b3b7a944daebbf02ca9443cd3c9ac8dfdb17b"></a>fl_slow&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8e6aa0c8558a5c10b3f313e39147b3b7a8466c39229c47a09fd725af14e4d904c"></a>fl_med&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8e6aa0c8558a5c10b3f313e39147b3b7a2be536988c2744e9deb124e2cf6a0bc2"></a>fl_fast&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="aeba5ccd1d820db1de169e9321e8b87f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba5ccd1d820db1de169e9321e8b87f3">&#9670;&nbsp;</a></span>itoa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * itoa </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>base</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="freertos_8c_aeba5ccd1d820db1de169e9321e8b87f3_cgraph.png" border="0" usemap="#freertos_8c_aeba5ccd1d820db1de169e9321e8b87f3_cgraph" alt=""/></div>
+<map name="freertos_8c_aeba5ccd1d820db1de169e9321e8b87f3_cgraph" id="freertos_8c_aeba5ccd1d820db1de169e9321e8b87f3_cgraph">
+<area shape="rect" id="node2" href="freertos_8c.html#a01264c39e4ef8945e436d9a9a51e3ff1" title="strreverse" alt="" coords="96,5,175,32"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="freertos_8c_aeba5ccd1d820db1de169e9321e8b87f3_icgraph.png" border="0" usemap="#freertos_8c_aeba5ccd1d820db1de169e9321e8b87f3_icgraph" alt=""/></div>
+<map name="freertos_8c_aeba5ccd1d820db1de169e9321e8b87f3_icgraph" id="freertos_8c_aeba5ccd1d820db1de169e9321e8b87f3_icgraph">
+<area shape="rect" id="node2" href="freertos_8c.html#a37797a7ab19b96e0db3bc95f893d29a6" title="StartReceiveTask" alt="" coords="96,5,219,32"/>
+<area shape="rect" id="node3" href="main_8c.html#abade755e13d07c10889ae83143656158" title="MX_FREERTOS_Init" alt="" coords="267,5,408,32"/>
+<area shape="rect" id="node4" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point. " alt="" coords="456,5,507,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a308aef3c83ed238f869ec99de5fbe270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a308aef3c83ed238f869ec99de5fbe270">&#9670;&nbsp;</a></span>LED_Flash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LED_Flash </td>
+          <td>(</td>
+          <td class="paramtype">enum <a class="el" href="freertos_8c.html#a8e6aa0c8558a5c10b3f313e39147b3b7">flash_state</a>&#160;</td>
+          <td class="paramname"><em>fl_state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">portTickType *&#160;</td>
+          <td class="paramname"><em>LED_SleepTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="freertos_8c_a308aef3c83ed238f869ec99de5fbe270_icgraph.png" border="0" usemap="#freertos_8c_a308aef3c83ed238f869ec99de5fbe270_icgraph" alt=""/></div>
+<map name="freertos_8c_a308aef3c83ed238f869ec99de5fbe270_icgraph" id="freertos_8c_a308aef3c83ed238f869ec99de5fbe270_icgraph">
+<area shape="rect" id="node2" href="freertos_8c.html#af92ea2a2293aa2982cfd9270d755e7dc" title="StartLedTask" alt="" coords="140,5,239,32"/>
+<area shape="rect" id="node3" href="main_8c.html#abade755e13d07c10889ae83143656158" title="MX_FREERTOS_Init" alt="" coords="287,5,428,32"/>
+<area shape="rect" id="node4" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point. " alt="" coords="476,5,527,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abade755e13d07c10889ae83143656158"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abade755e13d07c10889ae83143656158">&#9670;&nbsp;</a></span>MX_FREERTOS_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MX_FREERTOS_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="freertos_8c_abade755e13d07c10889ae83143656158_cgraph.png" border="0" usemap="#freertos_8c_abade755e13d07c10889ae83143656158_cgraph" alt=""/></div>
+<map name="freertos_8c_abade755e13d07c10889ae83143656158_cgraph" id="freertos_8c_abade755e13d07c10889ae83143656158_cgraph">
+<area shape="rect" id="node2" href="freertos_8c.html#a37797a7ab19b96e0db3bc95f893d29a6" title="StartReceiveTask" alt="" coords="215,81,338,108"/>
+<area shape="rect" id="node8" href="freertos_8c.html#af92ea2a2293aa2982cfd9270d755e7dc" title="StartLedTask" alt="" coords="227,144,326,171"/>
+<area shape="rect" id="node10" href="freertos_8c.html#a1d686e7ddadd81a35804436f553f0398" title="StartMovingAverageTask" alt="" coords="195,195,359,221"/>
+<area shape="rect" id="node3" href="asu__pro__parser_8c.html#a940367e6fa9f911eecba829b431cf47b" title="Parse_AsuProMess" alt="" coords="407,5,545,32"/>
+<area shape="rect" id="node4" href="asu__pro__parser_8c.html#a9888473c75f3110737cf7848dcfb29ec" title="Send_AsuProMess" alt="" coords="409,56,543,83"/>
+<area shape="rect" id="node6" href="freertos_8c.html#aeba5ccd1d820db1de169e9321e8b87f3" title="itoa" alt="" coords="455,107,497,133"/>
+<area shape="rect" id="node5" href="usart_8c.html#ac5df99aa554a18a0e59f674bc4e567d7" title="UART_PutChar" alt="" coords="593,56,704,83"/>
+<area shape="rect" id="node7" href="freertos_8c.html#a01264c39e4ef8945e436d9a9a51e3ff1" title="strreverse" alt="" coords="609,107,688,133"/>
+<area shape="rect" id="node9" href="freertos_8c.html#a308aef3c83ed238f869ec99de5fbe270" title="LED_Flash" alt="" coords="433,157,519,184"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="freertos_8c_abade755e13d07c10889ae83143656158_icgraph.png" border="0" usemap="#freertos_8c_abade755e13d07c10889ae83143656158_icgraph" alt=""/></div>
+<map name="freertos_8c_abade755e13d07c10889ae83143656158_icgraph" id="freertos_8c_abade755e13d07c10889ae83143656158_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point. " alt="" coords="195,5,245,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af92ea2a2293aa2982cfd9270d755e7dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af92ea2a2293aa2982cfd9270d755e7dc">&#9670;&nbsp;</a></span>StartLedTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StartLedTask </td>
+          <td>(</td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>argument</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>&lt; текущее значение тиков</p>
+<p>&lt; проверяем очередь </p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="freertos_8c_af92ea2a2293aa2982cfd9270d755e7dc_cgraph.png" border="0" usemap="#freertos_8c_af92ea2a2293aa2982cfd9270d755e7dc_cgraph" alt=""/></div>
+<map name="freertos_8c_af92ea2a2293aa2982cfd9270d755e7dc_cgraph" id="freertos_8c_af92ea2a2293aa2982cfd9270d755e7dc_cgraph">
+<area shape="rect" id="node2" href="freertos_8c.html#a308aef3c83ed238f869ec99de5fbe270" title="LED_Flash" alt="" coords="152,5,239,32"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="freertos_8c_af92ea2a2293aa2982cfd9270d755e7dc_icgraph.png" border="0" usemap="#freertos_8c_af92ea2a2293aa2982cfd9270d755e7dc_icgraph" alt=""/></div>
+<map name="freertos_8c_af92ea2a2293aa2982cfd9270d755e7dc_icgraph" id="freertos_8c_af92ea2a2293aa2982cfd9270d755e7dc_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#abade755e13d07c10889ae83143656158" title="MX_FREERTOS_Init" alt="" coords="152,5,293,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point. " alt="" coords="341,5,392,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1d686e7ddadd81a35804436f553f0398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d686e7ddadd81a35804436f553f0398">&#9670;&nbsp;</a></span>StartMovingAverageTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StartMovingAverageTask </td>
+          <td>(</td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>argument</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="freertos_8c_a1d686e7ddadd81a35804436f553f0398_icgraph.png" border="0" usemap="#freertos_8c_a1d686e7ddadd81a35804436f553f0398_icgraph" alt=""/></div>
+<map name="freertos_8c_a1d686e7ddadd81a35804436f553f0398_icgraph" id="freertos_8c_a1d686e7ddadd81a35804436f553f0398_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#abade755e13d07c10889ae83143656158" title="MX_FREERTOS_Init" alt="" coords="217,5,359,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point. " alt="" coords="407,5,457,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a37797a7ab19b96e0db3bc95f893d29a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37797a7ab19b96e0db3bc95f893d29a6">&#9670;&nbsp;</a></span>StartReceiveTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StartReceiveTask </td>
+          <td>(</td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>argument</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>&lt; активируем прерывания по приходу байта и по окончании передачи байта</p>
+<p>&lt; здесь берем семафор один раз так как сработало прерывание TC</p>
+<p>&lt; ждем сообщение по UART</p>
+<p>&lt; парсим</p>
+<p>&lt; если пришло не понятно что</p>
+<p>&lt; частота светодиода 1HZ</p>
+<p>&lt; отправляем отклик</p>
+<p>&lt;обновляем частоту моргания светодиода в потоке LedTask</p>
+<p>&lt; состояние светодиода - отключен</p>
+<p>&lt; посылаем запрос о необходимости среднего значения напряжения потоку MovingAverageTask</p>
+<p>&lt; получаем среднее значение напряжения</p>
+<p>&lt; если среднее значение не готово то сигнализируем</p>
+<p>&lt; переводим в ASCII целую часть</p>
+<p>&lt; добавляем точку</p>
+<p>&lt; берем дробную часть</p>
+<p>&lt; ответ</p>
+<p>&lt; устанавливаем дискретезацию АЦП 10Гц </p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="freertos_8c_a37797a7ab19b96e0db3bc95f893d29a6_cgraph.png" border="0" usemap="#freertos_8c_a37797a7ab19b96e0db3bc95f893d29a6_cgraph" alt=""/></div>
+<map name="freertos_8c_a37797a7ab19b96e0db3bc95f893d29a6_cgraph" id="freertos_8c_a37797a7ab19b96e0db3bc95f893d29a6_cgraph">
+<area shape="rect" id="node2" href="asu__pro__parser_8c.html#a940367e6fa9f911eecba829b431cf47b" title="Parse_AsuProMess" alt="" coords="176,5,315,32"/>
+<area shape="rect" id="node3" href="asu__pro__parser_8c.html#a9888473c75f3110737cf7848dcfb29ec" title="Send_AsuProMess" alt="" coords="178,56,313,83"/>
+<area shape="rect" id="node5" href="freertos_8c.html#aeba5ccd1d820db1de169e9321e8b87f3" title="itoa" alt="" coords="224,107,267,133"/>
+<area shape="rect" id="node4" href="usart_8c.html#ac5df99aa554a18a0e59f674bc4e567d7" title="UART_PutChar" alt="" coords="363,56,473,83"/>
+<area shape="rect" id="node6" href="freertos_8c.html#a01264c39e4ef8945e436d9a9a51e3ff1" title="strreverse" alt="" coords="379,107,457,133"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="freertos_8c_a37797a7ab19b96e0db3bc95f893d29a6_icgraph.png" border="0" usemap="#freertos_8c_a37797a7ab19b96e0db3bc95f893d29a6_icgraph" alt=""/></div>
+<map name="freertos_8c_a37797a7ab19b96e0db3bc95f893d29a6_icgraph" id="freertos_8c_a37797a7ab19b96e0db3bc95f893d29a6_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#abade755e13d07c10889ae83143656158" title="MX_FREERTOS_Init" alt="" coords="176,5,317,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point. " alt="" coords="365,5,416,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a01264c39e4ef8945e436d9a9a51e3ff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01264c39e4ef8945e436d9a9a51e3ff1">&#9670;&nbsp;</a></span>strreverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void strreverse </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="freertos_8c_a01264c39e4ef8945e436d9a9a51e3ff1_icgraph.png" border="0" usemap="#freertos_8c_a01264c39e4ef8945e436d9a9a51e3ff1_icgraph" alt=""/></div>
+<map name="freertos_8c_a01264c39e4ef8945e436d9a9a51e3ff1_icgraph" id="freertos_8c_a01264c39e4ef8945e436d9a9a51e3ff1_icgraph">
+<area shape="rect" id="node2" href="freertos_8c.html#aeba5ccd1d820db1de169e9321e8b87f3" title="itoa" alt="" coords="132,5,175,32"/>
+<area shape="rect" id="node3" href="freertos_8c.html#a37797a7ab19b96e0db3bc95f893d29a6" title="StartReceiveTask" alt="" coords="223,5,345,32"/>
+<area shape="rect" id="node4" href="main_8c.html#abade755e13d07c10889ae83143656158" title="MX_FREERTOS_Init" alt="" coords="393,5,535,32"/>
+<area shape="rect" id="node5" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point. " alt="" coords="583,5,633,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1988aa923b19fa6f31c93afa7773f793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1988aa923b19fa6f31c93afa7773f793">&#9670;&nbsp;</a></span>vApplicationGetIdleTaskMemory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vApplicationGetIdleTaskMemory </td>
+          <td>(</td>
+          <td class="paramtype">StaticTask_t **&#160;</td>
+          <td class="paramname"><em>ppxIdleTaskTCBBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StackType_t **&#160;</td>
+          <td class="paramname"><em>ppxIdleTaskStackBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>pulIdleTaskStackSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a1c47ad32e481d42b982c4131be1bdd66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c47ad32e481d42b982c4131be1bdd66">&#9670;&nbsp;</a></span>ADC_ValBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ADC_ValBuf[<a class="el" href="freertos_8c.html#ac9a9c2a3f177a2c8cf04ebef364774a3">ADC_VAL_BUFFER_SIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>буфер для хранения значений ADC. </p>
+
+</div>
+</div>
+<a id="a32261fff756cd4ad429e5eeb8be00860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32261fff756cd4ad429e5eeb8be00860">&#9670;&nbsp;</a></span>ADCAverQueueBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ADCAverQueueBuffer[1 *sizeof(float)]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef4669ba6396c4bb263c76e593bb05a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef4669ba6396c4bb263c76e593bb05a8">&#9670;&nbsp;</a></span>ADCAverQueueControlBlock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osStaticMessageQDef_t ADCAverQueueControlBlock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ffcbc6cd59555cb138cf9b3cd4cc48a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ffcbc6cd59555cb138cf9b3cd4cc48a">&#9670;&nbsp;</a></span>ADCAverQueueHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osMessageQId ADCAverQueueHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbf495f0615d85a718661e4b4e750727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbf495f0615d85a718661e4b4e750727">&#9670;&nbsp;</a></span>ADCValQueueBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ADCValQueueBuffer[1 *sizeof(uint32_t)]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a410409eaa1b457af692cb072b09e2382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a410409eaa1b457af692cb072b09e2382">&#9670;&nbsp;</a></span>ADCValQueueControlBlock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osStaticMessageQDef_t ADCValQueueControlBlock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2300456fdc4a8deb4ef12c6ad016e6a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2300456fdc4a8deb4ef12c6ad016e6a0">&#9670;&nbsp;</a></span>ADCValQueueHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osMessageQId ADCValQueueHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7da911c41152df8683d69a00b3bb4c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7da911c41152df8683d69a00b3bb4c5">&#9670;&nbsp;</a></span>GetAvSemControlBlock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osStaticSemaphoreDef_t GetAvSemControlBlock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c0a41151b69bb411f7af47b8eca7183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c0a41151b69bb411f7af47b8eca7183">&#9670;&nbsp;</a></span>GetAvSemHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osSemaphoreId GetAvSemHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e9c992542c6705e73343507017fbbbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e9c992542c6705e73343507017fbbbc">&#9670;&nbsp;</a></span>LEDQueueBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LEDQueueBuffer[1 *sizeof(uint16_t)]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54721ef8d2fb7530bc4b99d5d8450e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54721ef8d2fb7530bc4b99d5d8450e52">&#9670;&nbsp;</a></span>LEDQueueControlBlock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osStaticMessageQDef_t LEDQueueControlBlock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14b2cb20562d3afe4dda29cdf4300332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14b2cb20562d3afe4dda29cdf4300332">&#9670;&nbsp;</a></span>LEDQueueHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osMessageQId LEDQueueHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a7636aaf0d4dc7a07eed7c2a30d6b97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a7636aaf0d4dc7a07eed7c2a30d6b97">&#9670;&nbsp;</a></span>LedTaskBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LedTaskBuffer[128]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02cc32c1e285191b5b1601e7f768115c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02cc32c1e285191b5b1601e7f768115c">&#9670;&nbsp;</a></span>LedTaskControlBlock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osStaticThreadDef_t LedTaskControlBlock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac76f95c4fb6865ff7dcab1e89c53b7c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac76f95c4fb6865ff7dcab1e89c53b7c5">&#9670;&nbsp;</a></span>LedTaskHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osThreadId LedTaskHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc5ab648e9d47664f60528d6036c47d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc5ab648e9d47664f60528d6036c47d9">&#9670;&nbsp;</a></span>MovingAverageTaHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osThreadId MovingAverageTaHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3c4cab44b25fa988952bed1c2d2dc4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3c4cab44b25fa988952bed1c2d2dc4c">&#9670;&nbsp;</a></span>MovingAverageTaskBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t MovingAverageTaskBuffer[128]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a395bd3686175360452df80f785aaad34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a395bd3686175360452df80f785aaad34">&#9670;&nbsp;</a></span>MovingAverageTaskControlBlock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osStaticThreadDef_t MovingAverageTaskControlBlock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7dc28ecc8fd6134809ba0758c503f662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dc28ecc8fd6134809ba0758c503f662">&#9670;&nbsp;</a></span>ReceiveTaskBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ReceiveTaskBuffer[256]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae13133bb24cce188fc1cfc4a42b95e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae13133bb24cce188fc1cfc4a42b95e5">&#9670;&nbsp;</a></span>ReceiveTaskControlBlock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osStaticThreadDef_t ReceiveTaskControlBlock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68d8f2b746d17f0a83cfb19de009b323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68d8f2b746d17f0a83cfb19de009b323">&#9670;&nbsp;</a></span>ReceiveTaskHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osThreadId ReceiveTaskHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>File Name : <a class="el" href="freertos_8c.html">freertos.c</a> Description : Code for freertos applications</p>
+<p>This notice applies to any and all portions of this file that are not between comment pairs USER CODE BEGIN and USER CODE END. Other portions of this file, whether inserted by the user or by software development tools are owned by their respective copyright owners.</p>
+<p>Copyright (c) 2018 STMicroelectronics International N.V. All rights reserved.</p>
+<p>Redistribution and use in source and binary forms, with or without modification, are permitted, provided that the following conditions are met:</p>
+<ol type="1">
+<li>Redistribution of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+<li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+<li>Neither the name of STMicroelectronics nor the names of other contributors to this software may be used to endorse or promote products derived from this software without specific written permission.</li>
+<li>This software, including modifications and/or derivative works of this software, must execute solely and exclusively on microcontroller or microprocessor devices manufactured by or for STMicroelectronics.</li>
+<li>Redistribution and use of this software other than as permitted under this license is void and will automatically terminate your rights under this license.</li>
+</ol>
+<p>THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT SHALL STMICROELECTRONICS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </p>
+
+</div>
+</div>
+<a id="aa38d4ccba721bf1ad62b7f4b2301ab24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38d4ccba721bf1ad62b7f4b2301ab24">&#9670;&nbsp;</a></span>TXSemControlBlock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osStaticSemaphoreDef_t TXSemControlBlock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cd6de59aba35c943828ef1d3bf8a7d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cd6de59aba35c943828ef1d3bf8a7d0">&#9670;&nbsp;</a></span>TXSemHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osSemaphoreId TXSemHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adda0cc2130676391115d29af493a2d11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda0cc2130676391115d29af493a2d11">&#9670;&nbsp;</a></span>UartQueueHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osMessageQId UartQueueHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a780a1dd74101cc7f966969fc2fd9cf5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a780a1dd74101cc7f966969fc2fd9cf5e">&#9670;&nbsp;</a></span>UartRXQueueBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t UartRXQueueBuffer[1 *sizeof(uint32_t)]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a68a8fab9c3be2808f5db4cfd675be8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a68a8fab9c3be2808f5db4cfd675be8">&#9670;&nbsp;</a></span>UartRXQueueControlBlock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osStaticMessageQDef_t UartRXQueueControlBlock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96e0c99246a586399c9d3ff0a7a5fe04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e0c99246a586399c9d3ff0a7a5fe04">&#9670;&nbsp;</a></span>UartRXQueueHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osMessageQId UartRXQueueHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

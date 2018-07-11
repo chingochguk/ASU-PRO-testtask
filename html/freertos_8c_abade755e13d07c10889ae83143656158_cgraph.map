@@ -1,0 +1,11 @@
+<map id="MX_FREERTOS_Init" name="MX_FREERTOS_Init">
+<area shape="rect" id="node2" href="$freertos_8c.html#a37797a7ab19b96e0db3bc95f893d29a6" title="StartReceiveTask" alt="" coords="215,81,338,108"/>
+<area shape="rect" id="node8" href="$freertos_8c.html#af92ea2a2293aa2982cfd9270d755e7dc" title="StartLedTask" alt="" coords="227,144,326,171"/>
+<area shape="rect" id="node10" href="$freertos_8c.html#a1d686e7ddadd81a35804436f553f0398" title="StartMovingAverageTask" alt="" coords="195,195,359,221"/>
+<area shape="rect" id="node3" href="$asu__pro__parser_8c.html#a940367e6fa9f911eecba829b431cf47b" title="Parse_AsuProMess" alt="" coords="407,5,545,32"/>
+<area shape="rect" id="node4" href="$asu__pro__parser_8c.html#a9888473c75f3110737cf7848dcfb29ec" title="Send_AsuProMess" alt="" coords="409,56,543,83"/>
+<area shape="rect" id="node6" href="$freertos_8c.html#aeba5ccd1d820db1de169e9321e8b87f3" title="itoa" alt="" coords="455,107,497,133"/>
+<area shape="rect" id="node5" href="$usart_8c.html#ac5df99aa554a18a0e59f674bc4e567d7" title="UART_PutChar" alt="" coords="593,56,704,83"/>
+<area shape="rect" id="node7" href="$freertos_8c.html#a01264c39e4ef8945e436d9a9a51e3ff1" title="strreverse" alt="" coords="609,107,688,133"/>
+<area shape="rect" id="node9" href="$freertos_8c.html#a308aef3c83ed238f869ec99de5fbe270" title="LED_Flash" alt="" coords="433,157,519,184"/>
+</map>

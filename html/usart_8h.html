@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Тестовое задание для АСУ ПРО: Файл first/Inc/usart.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Тестовое задание для АСУ ПРО
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Тестовое задание для АСУ ПРО</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.14 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_78523e90048af9308d791f3c9e5e0a00.html">first</a></li><li class="navelem"><a class="el" href="dir_cdfe7cf05c8a8216327e572251344af7.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл usart.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;stm32f1xx_ll_usart.h&quot;</code><br />
+<code>#include &quot;stm32f1xx_ll_rcc.h&quot;</code><br />
+<code>#include &quot;stm32f1xx_ll_bus.h&quot;</code><br />
+<code>#include &quot;stm32f1xx_ll_system.h&quot;</code><br />
+<code>#include &quot;stm32f1xx_ll_exti.h&quot;</code><br />
+<code>#include &quot;stm32f1xx_ll_cortex.h&quot;</code><br />
+<code>#include &quot;stm32f1xx_ll_utils.h&quot;</code><br />
+<code>#include &quot;stm32f1xx_ll_pwr.h&quot;</code><br />
+<code>#include &quot;stm32f1xx_ll_dma.h&quot;</code><br />
+<code>#include &quot;stm32f1xx.h&quot;</code><br />
+<code>#include &quot;stm32f1xx_ll_gpio.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для usart.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="usart_8h__incl.png" border="0" usemap="#first_2_inc_2usart_8h" alt=""/></div>
+<map name="first_2_inc_2usart_8h" id="first_2_inc_2usart_8h">
+<area shape="rect" id="node13" href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application. " alt="" coords="955,80,1017,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="usart_8h__dep__incl.png" border="0" usemap="#first_2_inc_2usart_8hdep" alt=""/></div>
+<map name="first_2_inc_2usart_8hdep" id="first_2_inc_2usart_8hdep">
+<area shape="rect" id="node2" href="asu__pro__parser_8c.html" title="Обработка сообщений для АСУ ПРО " alt="" coords="5,80,176,107"/>
+<area shape="rect" id="node3" href="main_8c.html" title=": Main program body " alt="" coords="201,80,311,107"/>
+<area shape="rect" id="node4" href="stm32f1xx__it_8c.html" title="Interrupt Service Routines. " alt="" coords="335,80,491,107"/>
+<area shape="rect" id="node5" href="usart_8c.html" title="first/Src/usart.c" alt="" coords="515,80,626,107"/>
+</map>
+</div>
+</div>
+<p><a href="usart_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a401c753d4de6ab56fcb026c91b8c8487"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usart_8h.html#a401c753d4de6ab56fcb026c91b8c8487">IT_Mask</a>&#160;&#160;&#160;((uint16_t)0x001F)</td></tr>
+<tr class="separator:a401c753d4de6ab56fcb026c91b8c8487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa053ef004867924f9bc26798ebee0513"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usart_8h.html#aa053ef004867924f9bc26798ebee0513">UART1_RX_BUFFER_SIZE</a>&#160;&#160;&#160;128</td></tr>
+<tr class="separator:aa053ef004867924f9bc26798ebee0513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636cf43da4fbee2d7ef305df0812cb30"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usart_8h.html#a636cf43da4fbee2d7ef305df0812cb30">UART1_RX_BUFFER_SIZE_MASK</a>&#160;&#160;&#160;((<a class="el" href="usart_8h.html#aa053ef004867924f9bc26798ebee0513">UART1_RX_BUFFER_SIZE</a>) - 1)</td></tr>
+<tr class="separator:a636cf43da4fbee2d7ef305df0812cb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a300022bd3cbfd2a07abcdc2af0f4817f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usart_8h.html#a300022bd3cbfd2a07abcdc2af0f4817f">UART_TX_BYTE_COMPLETE</a>&#160;&#160;&#160;1985</td></tr>
+<tr class="separator:a300022bd3cbfd2a07abcdc2af0f4817f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d093cf75a5554bf078db9a8a97a68b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usart_8h.html#a4d093cf75a5554bf078db9a8a97a68b1">UART_RX_BUSY</a>&#160;&#160;&#160;2018</td></tr>
+<tr class="separator:a4d093cf75a5554bf078db9a8a97a68b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a47642651029b93e3f9c9edad46bd27b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usart_8h.html#a47642651029b93e3f9c9edad46bd27b4">_Error_Handler</a> (char *, int)</td></tr>
+<tr class="memdesc:a47642651029b93e3f9c9edad46bd27b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is executed in case of error occurrence.  <a href="#a47642651029b93e3f9c9edad46bd27b4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a47642651029b93e3f9c9edad46bd27b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d1167735baafab8e3288526c424929"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usart_8h.html#a57d1167735baafab8e3288526c424929">MX_USART1_UART_Init</a> (void)</td></tr>
+<tr class="separator:a57d1167735baafab8e3288526c424929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5df99aa554a18a0e59f674bc4e567d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usart_8h.html#ac5df99aa554a18a0e59f674bc4e567d7">UART_PutChar</a> (char Char)</td></tr>
+<tr class="separator:ac5df99aa554a18a0e59f674bc4e567d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a401c753d4de6ab56fcb026c91b8c8487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a401c753d4de6ab56fcb026c91b8c8487">&#9670;&nbsp;</a></span>IT_Mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IT_Mask&#160;&#160;&#160;((uint16_t)0x001F)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>File Name : <a class="el" href="usart_8h.html">USART.h</a> Description : This file provides code for the configuration of the USART instances.</p>
+<p>This notice applies to any and all portions of this file that are not between comment pairs USER CODE BEGIN and USER CODE END. Other portions of this file, whether inserted by the user or by software development tools are owned by their respective copyright owners.</p>
+<p>Copyright (c) 2018 STMicroelectronics International N.V. All rights reserved.</p>
+<p>Redistribution and use in source and binary forms, with or without modification, are permitted, provided that the following conditions are met:</p>
+<ol type="1">
+<li>Redistribution of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+<li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+<li>Neither the name of STMicroelectronics nor the names of other contributors to this software may be used to endorse or promote products derived from this software without specific written permission.</li>
+<li>This software, including modifications and/or derivative works of this software, must execute solely and exclusively on microcontroller or microprocessor devices manufactured by or for STMicroelectronics.</li>
+<li>Redistribution and use of this software other than as permitted under this license is void and will automatically terminate your rights under this license.</li>
+</ol>
+<p>THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT SHALL STMICROELECTRONICS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.USART Interrupt Mask </p>
+
+</div>
+</div>
+<a id="aa053ef004867924f9bc26798ebee0513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa053ef004867924f9bc26798ebee0513">&#9670;&nbsp;</a></span>UART1_RX_BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART1_RX_BUFFER_SIZE&#160;&#160;&#160;128</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a636cf43da4fbee2d7ef305df0812cb30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636cf43da4fbee2d7ef305df0812cb30">&#9670;&nbsp;</a></span>UART1_RX_BUFFER_SIZE_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART1_RX_BUFFER_SIZE_MASK&#160;&#160;&#160;((<a class="el" href="usart_8h.html#aa053ef004867924f9bc26798ebee0513">UART1_RX_BUFFER_SIZE</a>) - 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d093cf75a5554bf078db9a8a97a68b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d093cf75a5554bf078db9a8a97a68b1">&#9670;&nbsp;</a></span>UART_RX_BUSY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART_RX_BUSY&#160;&#160;&#160;2018</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a300022bd3cbfd2a07abcdc2af0f4817f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a300022bd3cbfd2a07abcdc2af0f4817f">&#9670;&nbsp;</a></span>UART_TX_BYTE_COMPLETE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART_TX_BYTE_COMPLETE&#160;&#160;&#160;1985</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a47642651029b93e3f9c9edad46bd27b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47642651029b93e3f9c9edad46bd27b4">&#9670;&nbsp;</a></span>_Error_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _Error_Handler </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function is executed in case of error occurrence. </p>
+<p>Uncomment the line below to expanse the "assert_param" macro in the HAL drivers code.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file name as string. </td></tr>
+    <tr><td class="paramname">line</td><td>The line in file as a number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a57d1167735baafab8e3288526c424929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57d1167735baafab8e3288526c424929">&#9670;&nbsp;</a></span>MX_USART1_UART_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MX_USART1_UART_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>USART1 GPIO Configuration PA9 ---&mdash;&gt; USART1_TX PA10 ---&mdash;&gt; USART1_RX</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="usart_8h_a57d1167735baafab8e3288526c424929_icgraph.png" border="0" usemap="#usart_8h_a57d1167735baafab8e3288526c424929_icgraph" alt=""/></div>
+<map name="usart_8h_a57d1167735baafab8e3288526c424929_icgraph" id="usart_8h_a57d1167735baafab8e3288526c424929_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point. " alt="" coords="216,5,267,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac5df99aa554a18a0e59f674bc4e567d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5df99aa554a18a0e59f674bc4e567d7">&#9670;&nbsp;</a></span>UART_PutChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UART_PutChar </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>Char</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Кладем байт в регистр данных UART1 </p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="usart_8h_ac5df99aa554a18a0e59f674bc4e567d7_icgraph.png" border="0" usemap="#usart_8h_ac5df99aa554a18a0e59f674bc4e567d7_icgraph" alt=""/></div>
+<map name="usart_8h_ac5df99aa554a18a0e59f674bc4e567d7_icgraph" id="usart_8h_ac5df99aa554a18a0e59f674bc4e567d7_icgraph">
+<area shape="rect" id="node2" href="asu__pro__parser_8h.html#a9888473c75f3110737cf7848dcfb29ec" title="Send_AsuProMess" alt="" coords="164,5,299,32"/>
+<area shape="rect" id="node3" href="freertos_8c.html#a37797a7ab19b96e0db3bc95f893d29a6" title="StartReceiveTask" alt="" coords="347,5,469,32"/>
+<area shape="rect" id="node4" href="main_8c.html#abade755e13d07c10889ae83143656158" title="MX_FREERTOS_Init" alt="" coords="517,5,659,32"/>
+<area shape="rect" id="node5" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point. " alt="" coords="707,5,757,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

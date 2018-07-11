@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Тестовое задание для АСУ ПРО: Титульная страница</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Тестовое задание для АСУ ПРО
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Тестовое задание для АСУ ПРО</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.14 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Тестовое задание для АСУ ПРО Документация</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Свиридов Юрий Викторович, Челябинск, 07.2018 </p><pre class="fragment">      Данный проект создан в программной среде IAR Embedded Workbench 6.30.
+      Для базового конфигурирования микроконтроллера использовалось приложение STM32CubeMX.
+      Документация создавалась в Doxygen. Микроконтроллер STM32F103C8T6.
+
+ В проекте реализовано:
+   1) Прием сообщений по UART. 
+   2) Обработка сообщений оканчивающихся символом NULL.
+   3) Выполнение команд содержащихся в сообщениях и отправка ответа. 
+   4) Измерение напряжения с помощью АЦП с дискретностью 1000Гц.( Запуск
+      начала измерения происходит в обработчике прерывания таймера, который и 
+      задает частоту дискретизации).
+   5) Считывание с помощью DMA значения АЦП и передача его в регистр сравнения
+      таймера, который выдает сигнал ШИМ. Скважность сигнала ШИМ зависит от
+      значения напряжения АЦП.(На микроконтроллере STM32F103C8T6 нет ЦАП, 
+      поэтому используется этот вариант.)
+   6) Подсчет среднего значения сигнала АЦП и вывод его в качестве ответа на команду. 
+   7) Использование ОСРВ FreeRTOS.
+   8) Использование 3-ех потоков (задач) ОС.(ReceiveTask, LedTask, MovingAverageTask)
+   9) Использование очередей, семафоров.
+
+ Некоторые требования тестового задания не были выполнены так как,
+  по мнению автора, не являются оптимальными.</pre> </div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration. " alt="" coords="114,5,257,32"/>
+<area shape="rect" id="node3" href="$gpio_8c.html#ac724e431d2af879252de35615be2bdea" title="MX_GPIO_Init" alt="" coords="134,56,237,83"/>
+<area shape="rect" id="node4" href="$dma_8c.html#a323249dac769f9855c10b4ec9446b707" title="MX_DMA_Init" alt="" coords="135,107,235,133"/>
+<area shape="rect" id="node5" href="$adc_8c.html#acccd58aa70215a6b184ad242312ffd0c" title="MX_ADC1_Init" alt="" coords="133,157,238,184"/>
+<area shape="rect" id="node6" href="$tim_8c.html#ad1f9d42690163f73f73e5b820c81ca14" title="MX_TIM1_Init" alt="" coords="136,208,235,235"/>
+<area shape="rect" id="node7" href="$usart_8c.html#a57d1167735baafab8e3288526c424929" title="MX_USART1_UART_Init" alt="" coords="104,259,267,285"/>
+<area shape="rect" id="node8" href="$tim_8c.html#a7912f2916786a2c33cb6fb8259ade58c" title="MX_TIM3_Init" alt="" coords="136,309,235,336"/>
+<area shape="rect" id="node9" href="$adc_8c.html#a83cb1ab64bc2532eb705314ad490b604" title="ADC_Calibrate" alt="" coords="132,360,239,387"/>
+<area shape="rect" id="node10" href="$tim_8c.html#af65777aaf4bbc566b1d02fa439b88013" title="TIM3_OutputEnable" alt="" coords="117,411,253,437"/>
+<area shape="rect" id="node11" href="$main_8c.html#abade755e13d07c10889ae83143656158" title="MX_FREERTOS_Init" alt="" coords="115,461,256,488"/>
+<area shape="rect" id="node12" href="$freertos_8c.html#a37797a7ab19b96e0db3bc95f893d29a6" title="StartReceiveTask" alt="" coords="335,399,458,425"/>
+<area shape="rect" id="node18" href="$freertos_8c.html#af92ea2a2293aa2982cfd9270d755e7dc" title="StartLedTask" alt="" coords="347,461,446,488"/>
+<area shape="rect" id="node20" href="$freertos_8c.html#a1d686e7ddadd81a35804436f553f0398" title="StartMovingAverageTask" alt="" coords="315,512,479,539"/>
+<area shape="rect" id="node13" href="$asu__pro__parser_8c.html#a940367e6fa9f911eecba829b431cf47b" title="Parse_AsuProMess" alt="" coords="527,323,665,349"/>
+<area shape="rect" id="node14" href="$asu__pro__parser_8c.html#a9888473c75f3110737cf7848dcfb29ec" title="Send_AsuProMess" alt="" coords="529,373,663,400"/>
+<area shape="rect" id="node16" href="$freertos_8c.html#aeba5ccd1d820db1de169e9321e8b87f3" title="itoa" alt="" coords="575,424,617,451"/>
+<area shape="rect" id="node15" href="$usart_8c.html#ac5df99aa554a18a0e59f674bc4e567d7" title="UART_PutChar" alt="" coords="713,373,824,400"/>
+<area shape="rect" id="node17" href="$freertos_8c.html#a01264c39e4ef8945e436d9a9a51e3ff1" title="strreverse" alt="" coords="729,424,808,451"/>
+<area shape="rect" id="node19" href="$freertos_8c.html#a308aef3c83ed238f869ec99de5fbe270" title="LED_Flash" alt="" coords="553,475,639,501"/>
+</map>
