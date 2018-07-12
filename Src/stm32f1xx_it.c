@@ -246,8 +246,10 @@ static uint16_t len = 0;///< длина сообщения
      UART1_RxHead = (UART1_RxHead & UART1_RX_BUFFER_SIZE_MASK); 
      
      if ((USART1->DR & (uint16_t)0x01FF) == 0x00)///< если пришел NUL символ
-     {      
-       qdata.len = len - 1; ///< формируем очередь
+     { 
+       if(len)
+        qdata.len = len - 1; ///< формируем очередь
+       qdata.len = len;
        qdata.pos = UART1_RxHead;///< формируем очередь
        len = 0;      
        xQueueSendToBackFromISR(UartRXQueueHandle, &qdata, &xTaskWokenBy ) ;///< сигнализируем о приеме данных
