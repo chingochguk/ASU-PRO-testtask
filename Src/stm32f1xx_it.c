@@ -249,7 +249,8 @@ static uint16_t len = 0;///< длина сообщения
      { 
        if(len)
         qdata.len = len - 1; ///< формируем очередь
-       qdata.len = len;
+       else
+        qdata.len = UART1_RX_BUFFER_SIZE;
        qdata.pos = UART1_RxHead;///< формируем очередь
        len = 0;      
        xQueueSendToBackFromISR(UartRXQueueHandle, &qdata, &xTaskWokenBy ) ;///< сигнализируем о приеме данных
