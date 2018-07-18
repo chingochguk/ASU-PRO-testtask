@@ -91,8 +91,8 @@ uint32_t Parse_AsuProMess(UART_Queue_typedef qdata)
                                        UART1_RX_BUFFER_SIZE_MASK ] == 'D')&&
              (UART1_RxBuf[((UART1_RX_BUFFER_SIZE + qdata.pos) - 6) &
                                        UART1_RX_BUFFER_SIZE_MASK ] == 'E')&& 
-             (UART1_RxBuf[((UART1_RX_BUFFER_SIZE + qdata.pos) - 7) &
-                                       UART1_RX_BUFFER_SIZE_MASK ] == 'L'))
+             (UART1_RxBuf[((UART1_RX_BUFFER_SIZE + qdata.pos) - 2) &
+                                       UART1_RX_BUFFER_SIZE_MASK ] == 'N'))
           {
             isOK = _LED_ON; 
           }
@@ -108,8 +108,8 @@ uint32_t Parse_AsuProMess(UART_Queue_typedef qdata)
                                        UART1_RX_BUFFER_SIZE_MASK ] == 'A')&&
            (UART1_RxBuf[((UART1_RX_BUFFER_SIZE + qdata.pos) - 18) &
                                        UART1_RX_BUFFER_SIZE_MASK ] == 'T')&& 
-           (UART1_RxBuf[((UART1_RX_BUFFER_SIZE + qdata.pos) - 20) &
-                                       UART1_RX_BUFFER_SIZE_MASK ] == 'G'))
+           (UART1_RxBuf[((UART1_RX_BUFFER_SIZE + qdata.pos) - 12) &
+                                       UART1_RX_BUFFER_SIZE_MASK ] == 'A'))
          {
           isOK = _GET_ADC_AVG_VOLTAGE;
          }
@@ -122,7 +122,7 @@ uint32_t Parse_AsuProMess(UART_Queue_typedef qdata)
                                        UART1_RX_BUFFER_SIZE_MASK ] == 'R')&&
              (UART1_RxBuf[((UART1_RX_BUFFER_SIZE + qdata.pos) - 10) &
                                        UART1_RX_BUFFER_SIZE_MASK ] == 'M')&& 
-             (UART1_RxBuf[((UART1_RX_BUFFER_SIZE + qdata.pos) - 20) &
+             (UART1_RxBuf[((UART1_RX_BUFFER_SIZE + qdata.pos) - 12) &
                                        UART1_RX_BUFFER_SIZE_MASK ] == 'S'))
         {
           isOK = _SET_ADC_SAMPLE_RATE;
